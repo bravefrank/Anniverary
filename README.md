@@ -1,3 +1,3 @@
 # 结婚一周年纪念
 
-[记录我们的爱](https://mylovestory.github.io/mylove/)
+[记录我们的爱](https://bravefrank.github.io/Anniverary/)
