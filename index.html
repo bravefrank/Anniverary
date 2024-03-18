@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+			
+					<span class="comments">// boy live his life </span><br>
+					Boy boy = <span class="keyword">new</span> Boy(<span class="string">"AChun"</span>);<br>
+					<span class="comments">// girl live her life </span><br>
+					Girl girl = <span class="keyword">new</span> Girl(<span class="string">"AShon"</span>);<br>
+					<span class="comments">// one day, they met in the crowd </span><br>
+					boy.<span class="keyword">met</span>(girl);<br>
+					<span class="comments">// they talk about food, water, and almost everything </span><br>
+				  they.<span class="keyword">talkedAboutEverything</span>();<br>
+					<span class="comments">// one day they find that they had fall in love with each other </span><br>
+					they.<span class="keyword">fallInLoveWithEachOther</span>();<br>
+					<span class="comments">// so they decided to get married at October Nineteen, 2013 </span><br>
+					they.<span class="keyword">gotMarriedAt</span>(<span class="string">"October Nineteen, 2013"</span>);<br>
+					<span class="comments">// they live together very happy.</span><br>
+					they.<span class="keyword">liveAHappyLife</span>();<br>
+					<span class="keyword">while</span> (true) {<br>
+					<span class="placeholder"><span class="placeholder"><span class="comments">// and we believe that they will love each other forever and ever!</span><br>
+					<span class="placeholder"><span class="placeholder">they.<span class="keyword">loveEachOther</span>();<br>
+					}<br>
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						老婆,我爱你！
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love you forever and ever.<br/>
+						<div class="signature">- 阿坤</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2013, 9, 19);
+		together.setHours(12);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
